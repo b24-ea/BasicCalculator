@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/numberOneText"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="69dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/numberTwoText"
+        app:layout_constraintStart_toStartOf="@+id/numberTwoText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/numberTwoText"
+        android:layout_width="226dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="38dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberOneText" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="49dp"
+        android:onClick="mySum"
+        android:text="+"
+        app:cornerRadius="200dp"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:onClick="myMultiply"
+        android:text="*"
+        app:cornerRadius="200dp"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:onClick="myDiv"
+        android:text="/"
+        app:cornerRadius="200dp"
+        app:layout_constraintStart_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="6dp"
+        android:onClick="mySub"
+        android:text="-"
+        app:cornerRadius="200dp"
+        app:layout_constraintEnd_toEndOf="@+id/numberTwoText"
+        app:layout_constraintTop_toBottomOf="@+id/numberTwoText" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="165dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="80dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:hint="Result:0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
